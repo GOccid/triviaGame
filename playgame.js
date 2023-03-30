@@ -75,7 +75,7 @@ startGame = () => {
   getNewQuestion()
 }
 
-// 
+
   let getNewQuestion = () => {
   if(avaQuestions.length === 0 || quesCounter > max_questions) {
     localStorage.setItem('recentScore', score)
@@ -83,7 +83,7 @@ startGame = () => {
     return window.location.assign("/end.html")
   }
 
-// will keep track of questions
+// keep track of questions
   quesCounter++
   progressText.innerText = `Question ${quesCounter} of ${max_questions}`
   progressBarFull.style.width = `${(quesCounter/max_questions) * 100}%`
