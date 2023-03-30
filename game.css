@@ -1,0 +1,91 @@
+body{
+  color: blue;
+  background: rgb(209, 222, 135)
+}
+ 
+h1{
+  font-size: 3rem;
+  text-align: center;
+}
+
+.choice-container {
+  display: flex;
+  margin-bottom: 0.8rem;
+  width: 100%;
+  border-radius: 100px;
+  background:rgb(244, 81, 11);
+  font-size: 3rem;
+  min-width: 80rem;
+}
+
+.choice-container:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 white;
+  transform: scale(1.02);
+  transition: transform 100ms;
+}
+
+
+.choice-prefix{
+  padding: 2rem 2.5rem;
+  color:white;
+}
+
+.choice-text {
+  padding: 2rem;
+  width: 100%;
+}
+
+.correct {
+  background: linear-gradient(32deg, rgb(49, 238, 7) 0%, rgb(49, 238, 7)100%);
+}
+
+.incorrect {
+  background: linear-gradient(32deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+}
+
+/* heads up display */
+
+#hud {
+  display: flex;
+  justify-content: space-between;
+  }
+
+  .hud-prefix {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .hud-main-text {
+    text-align: center;
+  
+  }
+
+  #progressBar {
+    width: 20rem;
+    height: 3rem;
+    border: 0.2rem solid purple;
+    margin-top: 2rem;
+    border-radius: 50px;
+    overflow: hidden;
+  }
+
+  #progressBarFull {
+    height: 100%;
+    background: purple;
+    width: 0%;
+}
+
+
+
+
+
+
+@media screen and (max-widthn: 770px) {
+ .choice-container {
+  min-width: 40rem;
+ }
+}
+
+
+
