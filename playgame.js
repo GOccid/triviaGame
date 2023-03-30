@@ -75,8 +75,8 @@ startGame = () => {
   getNewQuestion()
 }
 
-
-getNewQuestion = () => {
+// 
+  let getNewQuestion = () => {
   if(avaQuestions.length === 0 || quesCounter > max_questions) {
     localStorage.setItem('recentScore', score)
 
@@ -87,7 +87,7 @@ getNewQuestion = () => {
   quesCounter++
   progressText.innerText = `Question ${quesCounter} of ${max_questions}`
   progressBarFull.style.width = `${(quesCounter/max_questions) * 100}%`
-// random questions
+// randomize quesions
   const questionsIndex= Math.floor(Math.random() * avaQuestions.length)
 // keeping track of which question we are on and which question to ask
   currQuestion = avaQuestions[questionsIndex]
@@ -97,7 +97,7 @@ getNewQuestion = () => {
     const number = choices.dataset['number']
     choices.innerText = currQuestion['choice' + number]
   })  
-
+// changes the  array content by removing or replacing element
   avaQuestions.splice(questionsIndex, 1)
 
   answers = true
